@@ -32,10 +32,10 @@ export ASHAREHUB_API_KEY="ash_你的密钥"
 
 | 数据接口 | 说明 | 数据范围 |
 |----------|------|----------|
-| [日线行情](skills/zh/market-daily.md) | OHLC 价格、成交量、涨跌幅 | 2020+，730万条 |
-| [每日估值](skills/zh/market-fundamentals.md) | PE、PB、换手率、市值 | 2010+，1360万条 |
+| [日线行情](skills/zh/market-daily.md) | OHLC 价格、成交量、涨跌幅 | 2020+ |
+| [每日估值](skills/zh/market-fundamentals.md) | PE、PB、换手率、市值 | 2010+ |
 | [北向资金](skills/zh/northbound-flows.md) | 沪深港通资金流向 | 2014+ |
-| [筹码分布](skills/zh/chip-distribution.md) | 成本分位、获利比例 | 2020+，730万条 |
+| [筹码分布](skills/zh/chip-distribution.md) | 成本分位、获利比例 | 2020+ |
 | [外汇行情](skills/zh/fx-daily.md) | 汇率（默认 USD/CNH） | 2012+ |
 | [指数日线](skills/zh/index-daily.md) | 上证综指、沪深300、创业板 | 2010+ |
 | [财务指标](skills/zh/financial-indicators.md) | ROE、EPS、利润率等 50+ 指标 | 按季度 |
