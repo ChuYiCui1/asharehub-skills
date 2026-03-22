@@ -1,36 +1,36 @@
-# Market Daily — 日线行情
+# Market Daily — Daily OHLC Prices
 
-## SDK 方法
+## SDK Method
 
 ```python
 client.market_daily(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
-## 参数
+## Parameters
 
-| 参数 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| `ts_code` | str | None | 股票代码，如 `000001.SZ`（平安银行）、`600519.SH`（贵州茅台） |
-| `start_date` | str | None | 起始日期，YYYY-MM-DD |
-| `end_date` | str | None | 结束日期，YYYY-MM-DD |
-| `limit` | int | 100 | 返回行数，最大 5000 |
-| `offset` | int | 0 | 分页偏移量 |
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `ts_code` | str | None | Stock code, e.g. `000001.SZ` (Ping An Bank), `600519.SH` (Moutai) |
+| `start_date` | str | None | Start date, YYYY-MM-DD |
+| `end_date` | str | None | End date, YYYY-MM-DD |
+| `limit` | int | 100 | Max rows, up to 5000 |
+| `offset` | int | 0 | Pagination offset |
 
-## 返回字段
+## Response Fields
 
-| 字段 | 说明 |
-|------|------|
-| `ts_code` | 股票代码 |
-| `trade_date` | 交易日期 |
-| `open`, `high`, `low`, `close` | 开高低收价格（元） |
-| `pre_close` | 昨收价（除权后） |
-| `change` | 涨跌额（元） |
-| `pct_chg` | 涨跌幅 % |
-| `vol` | 成交量（手，1手=100股） |
-| `amount` | 成交额（千元） |
+| Field | Description |
+|-------|-------------|
+| `ts_code` | Stock code |
+| `trade_date` | Trading date |
+| `open`, `high`, `low`, `close` | OHLC prices (CNY) |
+| `pre_close` | Previous close (ex-dividend adjusted) |
+| `change` | Price change (CNY) |
+| `pct_chg` | Daily return % |
+| `vol` | Volume in lots (1 lot = 100 shares) |
+| `amount` | Turnover in thousands of CNY |
 
-## 数据范围
+## Data Coverage
 
-- 起始日期：2020-01-02
-- 记录数：7.3M+
-- API 路径：`GET /v1/market/daily`
+- From: 2020-01-02
+- Records: 7.3M+
+- API path: `GET /v1/market/daily`

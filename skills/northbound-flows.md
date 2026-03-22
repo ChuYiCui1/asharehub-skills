@@ -1,32 +1,33 @@
-# Northbound Flows — 北向资金
+# Northbound Flows — Stock Connect Capital Flows
 
-## SDK 方法
+## SDK Method
 
 ```python
 client.northbound_flows(start_date=None, end_date=None, limit=100, offset=0)
 ```
 
-## 参数
+## Parameters
 
-| 参数 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| `start_date` | str | None | 起始日期，YYYY-MM-DD |
-| `end_date` | str | None | 结束日期，YYYY-MM-DD |
-| `limit` | int | 100 | 返回行数，最大 2000 |
-| `offset` | int | 0 | 分页偏移量 |
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `start_date` | str | None | Start date, YYYY-MM-DD |
+| `end_date` | str | None | End date, YYYY-MM-DD |
+| `limit` | int | 100 | Max rows, up to 2000 |
+| `offset` | int | 0 | Pagination offset |
 
-## 返回字段
+## Response Fields
 
-| 字段 | 说明 |
-|------|------|
-| `trade_date` | 交易日期 |
-| `hgt_ss`, `hgt_sz` | 沪股通/深股通北向（百万元） |
-| `ggt_ss`, `ggt_sz` | 港股通南向（百万元） |
-| `north_money` | 北向资金净流入合计（百万元），正值=外资净买入 |
-| `south_money` | 南向资金净流入合计（百万元） |
+| Field | Description |
+|-------|-------------|
+| `trade_date` | Trading date |
+| `hgt_ss`, `hgt_sz` | Shanghai / Shenzhen northbound (millions CNY) |
+| `ggt_ss`, `ggt_sz` | HK southbound via Shanghai / Shenzhen (millions CNY) |
+| `north_money` | Total northbound net inflow (millions CNY) — positive = net buying |
+| `south_money` | Total southbound net inflow (millions CNY) |
 
-## 数据范围
+## Data Coverage
 
-- 起始日期：2014-11-17
-- 每个交易日一条记录
-- API 路径：`GET /v1/flows/northbound`
+- From: 2014-11-17
+- One record per trading day
+- Key indicator of foreign investor sentiment toward A-shares
+- API path: `GET /v1/flows/northbound`
