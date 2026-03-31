@@ -6,6 +6,17 @@
 client.technical_factors(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, close_qfq, macd, kdj_k, rsi_6, boll_upper/mid/lower, cci, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.technical_factors(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "close_qfq", "macd", "kdj_k", "rsi_6"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

@@ -6,6 +6,17 @@
 client.express(ts_code=None, start_date=None, end_date=None, limit=50, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, ann_date, end_date, revenue, n_income, diluted_roe, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.express(ts_code="000001.SZ", limit=3)
+print(df[["ann_date", "end_date", "revenue", "n_income", "diluted_roe"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

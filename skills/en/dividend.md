@@ -6,6 +6,17 @@
 client.dividend(ts_code=None, start_date=None, end_date=None, limit=50, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, end_date, ann_date, cash_div, stk_div, ex_date, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.dividend(ts_code="000001.SZ", limit=3)
+print(df[["end_date", "cash_div", "stk_div", "ex_date"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

@@ -6,6 +6,17 @@
 client.fundamentals(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, pe, pe_ttm, pb, total_mv, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.fundamentals(ts_code="600519.SH", limit=3)
+print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

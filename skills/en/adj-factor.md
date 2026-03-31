@@ -6,6 +6,17 @@
 client.adj_factor(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, adj_factor. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.adj_factor(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "adj_factor"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

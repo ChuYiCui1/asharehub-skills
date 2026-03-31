@@ -6,6 +6,17 @@
 client.balance_sheet(ts_code=None, start_date=None, end_date=None, limit=20, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, ann_date, end_date, total_assets, total_liab, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.balance_sheet(ts_code="000001.SZ", limit=3)
+print(df[["end_date", "total_assets", "total_liab"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

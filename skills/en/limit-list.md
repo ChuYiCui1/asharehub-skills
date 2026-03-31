@@ -6,6 +6,17 @@
 client.limit_list(ts_code=None, start_date=None, end_date=None, limit_type=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: trade_date, ts_code, name, close, pct_chg, limit, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.limit_list(limit=3, limit_type="U")
+print(df[["trade_date", "ts_code", "name", "pct_chg"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

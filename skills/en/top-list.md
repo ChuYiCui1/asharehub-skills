@@ -6,6 +6,17 @@
 client.top_list(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: trade_date, ts_code, name, close, pct_change, amount, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.top_list(limit=3)
+print(df[["trade_date", "ts_code", "name", "pct_change"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

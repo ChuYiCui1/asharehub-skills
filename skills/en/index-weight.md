@@ -6,6 +6,17 @@
 client.index_weight(index_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: index_code, trade_date, con_code, con_name, weight. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.index_weight(index_code="399300.SZ", limit=5)
+print(df[["con_code", "con_name", "weight"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

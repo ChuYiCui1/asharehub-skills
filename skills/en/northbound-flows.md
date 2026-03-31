@@ -6,6 +6,17 @@
 client.northbound_flows(start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: trade_date, hgt_ss, hgt_sz, ggt_ss, ggt_sz, north_money, south_money. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.northbound_flows(limit=3)
+print(df[["trade_date", "north_money", "south_money"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

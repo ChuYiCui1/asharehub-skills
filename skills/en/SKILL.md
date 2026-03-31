@@ -60,9 +60,8 @@ import os
 client = AShareHub(api_key=os.environ["ASHAREHUB_API_KEY"])
 
 # Daily prices for Ping An Bank
-bars = client.market_daily(ts_code="000001.SZ", start_date="2024-01-01", end_date="2024-01-31")
-for b in bars:
-    print(f"{b.trade_date}  O:{b.open}  H:{b.high}  L:{b.low}  C:{b.close}  Vol:{b.vol}")
+df = client.market_daily(ts_code="000001.SZ", start_date="2024-01-01", end_date="2024-01-31")
+print(df[["trade_date", "open", "high", "low", "close", "vol"]])
 
 client.close()
 ```
@@ -117,6 +116,23 @@ client.close()
 | Industry Classification | `client.industry_list()` | industries.md | Shenwan 3-level industry mapping |
 | Trade Calendar | `client.trade_calendar()` | trade-calendar.md | SSE/SZSE trading days & holidays |
 
+## Return Types
+
+- All SDK methods return `pd.DataFrame`, same as Tushare.
+- Numeric fields are `float64`, string fields are `object`, safe for direct arithmetic.
+- Access columns as: `df["close"]`, `df.close`, `df.iloc[0]`.
+- Empty results: returns empty DataFrame when no data matches — e.g. non-trading days, weekends, future dates. Check with `df.empty`.
+
+### Handling non-trading days
+
+The API only contains data for actual trading days. If a query date has no data, the result is an empty DataFrame.
+Recommended pattern to get the most recent trading day's data:
+
+```python
+# Just use limit=1 without specifying dates — returns the latest available record
+df = client.market_daily(ts_code="000001.SZ", limit=1)
+```
+
 ## Workflow
 
 1. Identify which data endpoint matches the user's query
@@ -129,49 +145,43 @@ client.close()
 ### Get stock valuations
 
 ```python
-data = client.fundamentals(ts_code="600519.SH", start_date="2024-01-01")
-for d in data:
-    print(f"{d.trade_date}  PE:{d.pe_ttm:.1f}  PB:{d.pb:.1f}  MktCap:{d.total_mv/1e4:.0f}亿")
+df = client.fundamentals(ts_code="600519.SH", start_date="2024-01-01")
+print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
 ```
 
 ### Check northbound flows
 
 ```python
-flows = client.northbound_flows(start_date="2024-03-01", end_date="2024-03-15")
-for f in flows:
-    print(f"{f.trade_date}  North:{f.north_money:.0f}M  South:{f.south_money:.0f}M")
+df = client.northbound_flows(start_date="2024-03-01", end_date="2024-03-15")
+print(df[["trade_date", "north_money", "south_money"]])
 ```
 
 ### Chip distribution analysis
 
 ```python
-chips = client.chip_distribution(ts_code="000001.SZ", start_date="2024-03-01")
-for c in chips:
-    print(f"{c.trade_date}  Winner:{c.winner_rate:.1f}%  AvgCost:{c.weight_avg:.2f}")
+df = client.chip_distribution(ts_code="000001.SZ", start_date="2024-03-01")
+print(df[["trade_date", "winner_rate", "weight_avg"]])
 ```
 
 ### Index performance
 
 ```python
-idx = client.index_daily(ts_code="000300.SH", start_date="2024-01-01")  # CSI 300
-for i in idx:
-    print(f"{i.trade_date}  Close:{i.close:.2f}  Chg:{i.pct_chg:+.2f}%")
+df = client.index_daily(ts_code="000300.SH", start_date="2024-01-01")  # CSI 300
+print(df[["trade_date", "close", "pct_chg"]])
 ```
 
 ### FX rates
 
 ```python
-fx = client.fx_daily(ts_code="USDCNH.FXCM", start_date="2024-01-01")
-for f in fx:
-    print(f"{f.trade_date}  Bid:{f.bid_close:.4f}  Ask:{f.ask_close:.4f}")
+df = client.fx_daily(ts_code="USDCNH.FXCM", start_date="2024-01-01")
+print(df[["trade_date", "bid_close", "ask_close"]])
 ```
 
 ### Quarterly financials
 
 ```python
-fin = client.financial_indicators(ts_code="000001.SZ")
-for f in fin:
-    print(f"{f.end_date}  ROE:{f.roe:.2f}%  EPS:{f.eps:.2f}  Margin:{f.netprofit_margin:.1f}%")
+df = client.financial_indicators(ts_code="000001.SZ")
+print(df[["end_date", "roe", "eps", "netprofit_margin"]])
 ```
 
 ## Stock Code Format

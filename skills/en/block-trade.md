@@ -6,6 +6,17 @@
 client.block_trade(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, price, vol, amount, buyer, seller. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.block_trade(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "price", "vol", "buyer", "seller"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

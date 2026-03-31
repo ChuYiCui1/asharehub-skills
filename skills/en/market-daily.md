@@ -6,6 +6,17 @@
 client.market_daily(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, open, high, low, close, pre_close, change, pct_chg, vol, amount. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.market_daily(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "close", "pct_chg"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

@@ -6,6 +6,17 @@
 client.industry_list(ts_code=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, name, l1_code, l1_name, l2_code, l2_name, l3_code, l3_name. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.industry_list(ts_code="000001.SZ")
+print(df[["ts_code", "l1_name", "l2_name", "l3_name"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

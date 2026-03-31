@@ -6,6 +6,17 @@
 client.moneyflow(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, buy/sell amounts by order size, net_mf_amount. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.moneyflow(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "net_mf_amount", "buy_elg_amount"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

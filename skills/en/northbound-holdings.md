@@ -6,6 +6,17 @@
 client.northbound_holdings(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: trade_date, ts_code, name, vol, ratio, exchange. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.northbound_holdings(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "name", "vol", "ratio"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

@@ -6,6 +6,17 @@
 client.fx_daily(ts_code="USDCNH.FXCM", start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, bid_open/close/high/low, ask_open/close/high/low. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.fx_daily(ts_code="USDCNH.FXCM", limit=3)
+print(df[["trade_date", "bid_close", "ask_close"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

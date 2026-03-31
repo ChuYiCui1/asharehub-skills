@@ -6,6 +6,17 @@
 client.concept_members(ts_code=None, con_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: trade_date, ts_code, con_code, name. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.concept_members(ts_code="TS2", limit=5)
+print(df[["con_code", "name"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

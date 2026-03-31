@@ -6,6 +6,17 @@
 client.trade_calendar(exchange=None, start_date=None, end_date=None, is_open=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: exchange, cal_date, is_open, pretrade_date. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.trade_calendar(exchange="SSE", start_date="2024-03-25", end_date="2024-03-31")
+print(df[["cal_date", "is_open"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

@@ -6,6 +6,17 @@
 client.holder_trade(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, ann_date, holder_name, in_de, change_vol, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.holder_trade(ts_code="000001.SZ", limit=3)
+print(df[["ann_date", "holder_name", "in_de", "change_vol"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

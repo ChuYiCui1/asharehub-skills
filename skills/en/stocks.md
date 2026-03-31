@@ -6,6 +6,17 @@
 client.stock_list(ts_code=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, symbol, name, industry, list_date, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.stock_list(ts_code="000001.SZ")
+print(df[["ts_code", "name", "industry", "list_date"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

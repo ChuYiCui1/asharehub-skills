@@ -6,6 +6,17 @@
 client.financial_indicators(ts_code=None, start_date=None, end_date=None, limit=20, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, ann_date, end_date, roe, eps, netprofit_margin, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.financial_indicators(ts_code="000001.SZ", limit=3)
+print(df[["end_date", "roe", "eps", "netprofit_margin"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

@@ -6,6 +6,17 @@
 client.chip_distribution(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, trade_date, weight_avg, winner_rate, cost_5pct, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.chip_distribution(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "weight_avg", "winner_rate"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |

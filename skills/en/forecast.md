@@ -6,6 +6,17 @@
 client.forecast(ts_code=None, start_date=None, end_date=None, limit=50, offset=0)
 ```
 
+## Returns
+
+`pd.DataFrame` — columns: ts_code, ann_date, end_date, type, net_profit_min, net_profit_max, etc. Returns empty DataFrame if no data.
+
+## Example
+
+```python
+df = client.forecast(ts_code="000001.SZ", limit=3)
+print(df[["ann_date", "end_date", "type", "net_profit_min", "net_profit_max"]])
+```
+
 ## Parameters
 
 | Parameter | Type | Default | Description |
