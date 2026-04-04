@@ -6,6 +6,17 @@
 client.concept_members(ts_code=None, con_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.concept_members(ts_code="TS2", limit=5)
+print(df[["con_code", "name"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

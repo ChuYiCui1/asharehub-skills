@@ -6,6 +6,17 @@
 client.trade_calendar(exchange=None, start_date=None, end_date=None, is_open=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.trade_calendar(exchange="SSE", start_date="2024-03-25", end_date="2024-03-31")
+print(df[["cal_date", "is_open"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

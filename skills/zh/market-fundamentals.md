@@ -6,6 +6,17 @@
 client.fundamentals(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 数值列为 `float64`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.fundamentals(ts_code="600519.SH", limit=3)
+print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

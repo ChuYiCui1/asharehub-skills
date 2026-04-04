@@ -6,6 +6,17 @@
 client.financial_indicators(ts_code=None, start_date=None, end_date=None, limit=20, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 数值列为 `float64`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.financial_indicators(ts_code="000001.SZ", limit=3)
+print(df[["end_date", "roe", "eps", "netprofit_margin"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

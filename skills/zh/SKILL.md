@@ -63,6 +63,23 @@ user-invocable: true
 | 行业分类 | industries.md | 申万三级行业分类 |
 | 交易日历 | trade-calendar.md | 沪深交易所交易日与休市日 |
 
+## 返回类型
+
+- 所有方法返回 `pd.DataFrame`，与 Tushare 风格一致
+- 数值列为 `float64`，字符串列为 `object`，可直接运算
+- 访问方式：`df["close"]`、`df.close`、`df.iloc[0]`
+- 无数据时返回空 DataFrame，用 `df.empty` 判断
+
+### 非交易日处理
+
+API 只包含交易日数据。查询非交易日（周末/节假日）会返回空 DataFrame。
+推荐获取最新数据的方式：
+
+```python
+# 不指定日期 + limit=1，返回最近一个交易日的记录
+df = client.market_daily(ts_code="000001.SZ", limit=1)
+```
+
 ## 工作流程
 
 1. 根据用户的查询需求，确定需要哪个数据接口
@@ -75,14 +92,40 @@ user-invocable: true
 - Python SDK: `pip install asharehub`
 - API Key: 环境变量 `ASHAREHUB_API_KEY`
 
-## 基本代码模式
+## 快速开始
 
 ```python
 from asharehub import AShareHub
 import os
 
 client = AShareHub(api_key=os.environ["ASHAREHUB_API_KEY"])
-# 调用对应方法（参见各数据接口文档）
-data = client.xxx(...)
+
+# 返回 pd.DataFrame
+df = client.market_daily(ts_code="000001.SZ", start_date="2024-01-01", end_date="2024-01-31")
+print(df[["trade_date", "open", "high", "low", "close", "vol"]])
+
 client.close()
+```
+
+## 使用示例
+
+### 查看估值
+
+```python
+df = client.fundamentals(ts_code="600519.SH", start_date="2024-01-01")
+print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
+```
+
+### 北向资金
+
+```python
+df = client.northbound_flows(start_date="2024-03-01", end_date="2024-03-15")
+print(df[["trade_date", "north_money", "south_money"]])
+```
+
+### 财务指标
+
+```python
+df = client.financial_indicators(ts_code="000001.SZ")
+print(df[["end_date", "roe", "eps", "netprofit_margin"]])
 ```

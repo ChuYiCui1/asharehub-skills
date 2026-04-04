@@ -6,6 +6,17 @@
 client.limit_list(ts_code=None, start_date=None, end_date=None, limit_type=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 数值列为 `float64`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.limit_list(limit=3, limit_type="U")
+print(df[["trade_date", "ts_code", "name", "pct_chg"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

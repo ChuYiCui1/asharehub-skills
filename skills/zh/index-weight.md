@@ -6,6 +6,17 @@
 client.index_weight(index_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 数值列为 `float64`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.index_weight(index_code="399300.SZ", limit=5)
+print(df[["con_code", "con_name", "weight"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

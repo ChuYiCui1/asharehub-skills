@@ -6,6 +6,17 @@
 client.industry_list(ts_code=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.industry_list(ts_code="000001.SZ")
+print(df[["ts_code", "l1_name", "l2_name", "l3_name"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

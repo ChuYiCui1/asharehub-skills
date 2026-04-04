@@ -6,6 +6,17 @@
 client.moneyflow(ts_code=None, start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 金额为 `float64`，成交量为 `int`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.moneyflow(ts_code="000001.SZ", limit=3)
+print(df[["trade_date", "net_mf_amount", "buy_elg_amount"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

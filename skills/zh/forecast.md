@@ -6,6 +6,17 @@
 client.forecast(ts_code=None, start_date=None, end_date=None, limit=50, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 数值列为 `float64`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.forecast(ts_code="000001.SZ", limit=3)
+print(df[["ann_date", "end_date", "type", "net_profit_min", "net_profit_max"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |

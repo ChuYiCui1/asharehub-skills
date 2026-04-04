@@ -6,6 +6,17 @@
 client.fx_daily(ts_code="USDCNH.FXCM", start_date=None, end_date=None, limit=100, offset=0)
 ```
 
+## 返回类型
+
+`pd.DataFrame` — 数值列为 `float64`。无数据时返回空 DataFrame。
+
+## 示例
+
+```python
+df = client.fx_daily(ts_code="USDCNH.FXCM", limit=3)
+print(df[["trade_date", "bid_close", "ask_close"]])
+```
+
 ## 参数
 
 | 参数 | 类型 | 默认值 | 说明 |
