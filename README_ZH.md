@@ -34,7 +34,7 @@ export ASHAREHUB_API_KEY="ash_你的密钥"
 |----------|------|----------|
 | [日线行情](skills/zh/market-daily.md) | OHLC 价格、成交量、涨跌幅 | 2020+ |
 | [每日估值](skills/zh/market-fundamentals.md) | PE、PB、换手率、市值 | 2010+ |
-| [北向资金](skills/zh/northbound-flows.md) | 沪深港通资金流向 | 2014+ |
+| [北向资金](skills/zh/moneyflow-hsgt.md) | 沪深港通资金流向 | 2014+ |
 | [筹码分布](skills/zh/chip-distribution.md) | 成本分位、获利比例 | 2020+ |
 | [外汇行情](skills/zh/fx-daily.md) | 汇率（默认 USD/CNH） | 2012+ |
 | [指数日线](skills/zh/index-daily.md) | 上证综指、沪深300、创业板 | 2010+ |
@@ -63,7 +63,7 @@ skills/
 │   ├── SKILL.md                # 主入口
 │   ├── market-daily.md
 │   ├── market-fundamentals.md
-│   ├── northbound-flows.md
+│   ├── moneyflow-hsgt.md
 │   ├── chip-distribution.md
 │   ├── fx-daily.md
 │   ├── index-daily.md

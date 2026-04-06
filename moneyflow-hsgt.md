@@ -1,9 +1,9 @@
-# Northbound Flows — Stock Connect Capital Flows
+# HSGT Capital Flows — Stock Connect Capital Flows
 
 ## SDK Method
 
 ```python
-client.northbound_flows(start_date=None, end_date=None, limit=100, offset=0)
+client.moneyflow_hsgt(start_date=None, end_date=None, limit=100, offset=0)
 ```
 
 ## Returns
@@ -13,7 +13,7 @@ client.northbound_flows(start_date=None, end_date=None, limit=100, offset=0)
 ## Example
 
 ```python
-df = client.northbound_flows(limit=3)
+df = client.moneyflow_hsgt(limit=3)
 print(df[["trade_date", "north_money", "south_money"]])
 ```
 
@@ -41,4 +41,4 @@ print(df[["trade_date", "north_money", "south_money"]])
 - From: 2014-11-17
 - One record per trading day
 - Key indicator of foreign investor sentiment toward A-shares
-- API path: `GET /v1/flows/northbound`
+- API path: `GET /v1/flows/moneyflow-hsgt`

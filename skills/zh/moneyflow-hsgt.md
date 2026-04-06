@@ -1,9 +1,9 @@
-# 北向资金
+# 沪深港通资金
 
 ## SDK 方法
 
 ```python
-client.northbound_flows(start_date=None, end_date=None, limit=100, offset=0)
+client.moneyflow_hsgt(start_date=None, end_date=None, limit=100, offset=0)
 ```
 
 ## 返回类型
@@ -13,7 +13,7 @@ client.northbound_flows(start_date=None, end_date=None, limit=100, offset=0)
 ## 示例
 
 ```python
-df = client.northbound_flows(limit=3)
+df = client.moneyflow_hsgt(limit=3)
 print(df[["trade_date", "north_money", "south_money"]])
 ```
 
@@ -41,4 +41,4 @@ print(df[["trade_date", "north_money", "south_money"]])
 - 起始日期：2014-11-17
 - 每个交易日一条记录
 - 外资对 A 股情绪的关键指标
-- API 路径：`GET /v1/flows/northbound`
+- API 路径：`GET /v1/flows/moneyflow-hsgt`

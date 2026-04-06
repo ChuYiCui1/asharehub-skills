@@ -34,7 +34,7 @@ Get your free API key at [asharehub.com/console/register](https://asharehub.com/
 |-------|-------------|------------|
 | [Market Daily](skills/en/market-daily.md) | Daily OHLC prices, volume, returns | 2020+ |
 | [Market Fundamentals](skills/en/market-fundamentals.md) | PE, PB, turnover rate, market cap | 2010+ |
-| [Northbound Flows](skills/en/northbound-flows.md) | Stock Connect capital flows | 2014+ |
+| [HSGT Capital Flows](skills/en/moneyflow-hsgt.md) | Stock Connect capital flows | 2014+ |
 | [Chip Distribution](skills/en/chip-distribution.md) | Cost basis percentiles, winner rate | 2020+ |
 | [FX Daily](skills/en/fx-daily.md) | Foreign exchange rates (USD/CNH) | 2012+ |
 | [Index Daily](skills/en/index-daily.md) | SSE Composite, CSI 300, ChiNext | 2010+ |
@@ -63,7 +63,7 @@ skills/
 │   ├── SKILL.md                # Main entry point
 │   ├── market-daily.md
 │   ├── market-fundamentals.md
-│   ├── northbound-flows.md
+│   ├── moneyflow-hsgt.md
 │   ├── chip-distribution.md
 │   ├── fx-daily.md
 │   ├── index-daily.md

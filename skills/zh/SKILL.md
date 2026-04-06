@@ -29,7 +29,7 @@ user-invocable: true
 ### 资金流向
 | 数据类型 | 参考文档 | 说明 |
 |----------|----------|------|
-| 北向资金 | northbound-flows.md | 沪深港通资金流向 |
+| 北向资金 | moneyflow-hsgt.md | 沪深港通资金流向 |
 | 个股资金流 | moneyflow.md | 大中小单资金流向 |
 | 北向持股 | northbound-holdings.md | 外资个股持仓明细 |
 
@@ -116,10 +116,10 @@ df = client.fundamentals(ts_code="600519.SH", start_date="2024-01-01")
 print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
 ```
 
-### 北向资金
+### 沪深港通资金
 
 ```python
-df = client.northbound_flows(start_date="2024-03-01", end_date="2024-03-15")
+df = client.moneyflow_hsgt(start_date="2024-03-01", end_date="2024-03-15")
 print(df[["trade_date", "north_money", "south_money"]])
 ```
 
