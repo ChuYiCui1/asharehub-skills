@@ -82,7 +82,9 @@ client.close()
 | Concept Members | `client.concept_members()` | concept-members.md | Concept index constituents (2025–) |
 | Adj Factor | `client.adj_factor()` | adj-factor.md | Forward/backward price adjustment factor |
 | Technical Factors | `client.technical_factors()` | technical-factors.md | MACD, KDJ, RSI, BOLL, CCI + adjusted prices |
+| Technical Factors Pro | `client.technical_factors_pro()` | technical-factors-pro.md | 200+ indicators with bfq/qfq/hfq variants |
 | Limit List | `client.limit_list()` | limit-list.md | Daily limit-up/limit-down stocks (2020–) |
+| Top Inst | `client.top_inst()` | top-inst.md | Dragon & Tiger institutional seat detail |
 
 ### Capital Flows
 | Data Type | SDK Method | Reference File | Description |
@@ -90,6 +92,7 @@ client.close()
 | HSGT Capital Flows | `client.moneyflow_hsgt()` | moneyflow-hsgt.md | Stock Connect capital flows (2014–) |
 | Money Flow | `client.moneyflow()` | moneyflow.md | Per-stock money flow by order size (2020–) |
 | Northbound Holdings | `client.northbound_holdings()` | northbound-holdings.md | Foreign holdings per stock (2020–) |
+| Southbound Holdings | `client.southbound_holdings()` | southbound-holdings.md | Mainland-held HK stocks (2020–) |
 
 ### Other
 | Data Type | SDK Method | Reference File | Description |
@@ -102,6 +105,10 @@ client.close()
 | Earnings Forecast | `client.forecast()` | forecast.md | Profit warnings / guidance (业绩预告) |
 | Earnings Express | `client.express()` | express.md | Flash reports before formal filings (业绩快报) |
 | Dividend | `client.dividend()` | dividend.md | Cash & stock dividend distribution |
+| Analyst Reports | `client.analyst_reports()` | analyst-reports.md | Sell-side earnings forecasts & ratings |
+| Audit Opinions | `client.audit()` | audit.md | Annual report audit opinions |
+| Main Business | `client.main_business()` | main-business.md | Revenue/profit by business segment |
+| Disclosure Date | `client.disclosure_date()` | disclosure-date.md | Financial report disclosure schedule |
 
 ### Indices
 | Data Type | SDK Method | Reference File | Description |

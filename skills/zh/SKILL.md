@@ -1,6 +1,6 @@
 ---
 name: asharehub
-description: 查询中国A股市场数据（日线行情、估值指标、北向资金、资金流向、融资融券、大宗交易、龙虎榜、股东数据、概念板块、筹码分布、外汇、指数、财务报表、业绩预告/快报、分红送股、技术因子、涨跌停、交易日历），共29个数据接口
+description: 查询中国A股市场数据（日线行情、估值指标、沪深港通资金、资金流向、融资融券、大宗交易、龙虎榜、股东数据、概念板块、筹码分布、外汇、指数、财务报表、业绩预告/快报、分红送股、技术因子专业版、券商盈利预测、审计意见、主营业务构成、财报披露日期、涨跌停、交易日历、南向持股），共36个数据接口
 user-invocable: true
 ---
 
@@ -24,14 +24,17 @@ user-invocable: true
 | 概念成分 | concept-members.md | 概念板块成分股 |
 | 复权因子 | adj-factor.md | 前/后复权价格计算因子 |
 | 技术因子 | technical-factors.md | MACD、KDJ、RSI、布林带、CCI + 复权价 |
+| 技术因子专业版 | technical-factors-pro.md | 200+ 指标，含 bfq/qfq/hfq 三种复权 |
 | 涨跌停统计 | limit-list.md | 每日涨停/跌停/炸板统计（2020 年起） |
+| 龙虎榜机构明细 | top-inst.md | 异动股机构席位买卖明细 |
 
 ### 资金流向
 | 数据类型 | 参考文档 | 说明 |
 |----------|----------|------|
-| 北向资金 | moneyflow-hsgt.md | 沪深港通资金流向 |
+| 沪深港通资金 | moneyflow-hsgt.md | 沪深港通资金流向（北向+南向汇总） |
 | 个股资金流 | moneyflow.md | 大中小单资金流向 |
-| 北向持股 | northbound-holdings.md | 外资个股持仓明细 |
+| 北向持股 | northbound-holdings.md | 外资 A 股持仓明细 |
+| 南向持股 | southbound-holdings.md | 内地持有港股的明细 |
 
 ### 财务数据
 | 数据类型 | 参考文档 | 说明 |
@@ -43,6 +46,10 @@ user-invocable: true
 | 业绩预告 | forecast.md | 预增/预减/扭亏等预告 |
 | 业绩快报 | express.md | 正式财报前的快报 |
 | 分红送股 | dividend.md | 现金分红与送转股 |
+| 券商盈利预测 | analyst-reports.md | 卖方研报：目标价、评级、EPS/PE 预测 |
+| 审计意见 | audit.md | 年报审计意见与审计费用 |
+| 主营业务构成 | main-business.md | 按业务/产品/地区的收入利润明细 |
+| 财报披露日期 | disclosure-date.md | 预约披露日和实际披露日 |
 
 ### 指数
 | 数据类型 | 参考文档 | 说明 |
