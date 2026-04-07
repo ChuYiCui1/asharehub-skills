@@ -1,5 +1,30 @@
 # Top List — Dragon & Tiger List
 
+## Background — China's Unique Disclosure Mechanism
+
+**The "Dragon & Tiger List" (龙虎榜)** is a unique disclosure system in China. When a stock has unusual price movement or trading volume, the Shanghai/Shenzhen exchanges require disclosure of the **top 5 brokerage seats** by buy and sell volume.
+
+### When does a stock land on the list?
+A stock gets disclosed if it triggers any of:
+- Daily price change ≥ ±7% (≥ ±15% for ChiNext/STAR)
+- Daily turnover rate ≥ 20%
+- Daily price range ≥ 15%
+- Several consecutive limit-up/down days
+- Other unusual activity flagged by exchanges
+
+### Why investors track this
+- **Institutional footprint**: The disclosed seats often include well-known "hot money" hubs (游资席位) in Shanghai/Shenzhen and famous private fund seats. Tracking which seats are buying/selling is a major retail strategy.
+- **Coordinated buying signal**: When multiple known institutional seats appear on the buy side simultaneously, it's interpreted as collective interest.
+- **Pump-and-dump warning**: A stock with one large buy seat followed by the same seat selling within days is a classic pump-and-dump pattern.
+
+### Key fields explained
+- **`l_buy` / `l_sell` / `l_amount` (CNY)**: Total buy/sell amounts from the disclosed institutional seats.
+- The actual seat-level detail (which broker branch) is in `top_inst` — see that endpoint for institutional breakdown.
+
+### Caveats
+- Only the top 5 seats by volume are disclosed; smaller participants are aggregated as "other".
+- "Institutional seat" doesn't always mean institution — it can be a famous retail aggregator or hot-money trader operating through that branch.
+
 ## SDK Method
 
 ```python

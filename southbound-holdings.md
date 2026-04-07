@@ -1,5 +1,25 @@
 # Southbound Holdings — Mainland-Held HK Stocks
 
+## Background — Mainland Capital in HK Stocks
+
+This endpoint is the **mirror image of northbound holdings**. It tracks how much of each Hong Kong-listed stock is held by mainland Chinese investors via the Stock Connect.
+
+### Why this matters
+- **"Southbound favored" stocks**: When mainland investors heavily accumulate a HK-listed stock, it's a sign of mainland conviction — often Tencent, Meituan, BYD, internet platforms, or HK-listed Chinese banks.
+- **HK price discovery shifted to mainland**: For dual-listed companies (HK + A-share), heavy mainland ownership of the HK shares means HK pricing is increasingly driven by mainland sentiment.
+- **A/H premium signals**: When `ratio` rises sharply, the HK-A premium often narrows (mainland investors arbitraging the discount).
+
+### Key fields explained
+- **`ts_code`**: HK stock code (e.g. "00700" for Tencent).
+- **`vol`**: Shares held by mainland investors (in shares).
+- **`ratio`**: As % of total shares outstanding.
+- **`exchange`**: SH or SZ — which connect channel was used.
+
+### Caveats
+- HK stock codes use HK format, not A-share format.
+- Includes both H-shares (mainland incorporated, HK listed) and red chips (HK incorporated subsidiaries of mainland firms).
+- Mainland mutual funds and individual investors can both use southbound; this is the aggregate.
+
 ## SDK Method
 
 ```python
