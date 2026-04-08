@@ -60,6 +60,5 @@ print(df[["con_code", "name"]])
 ## Data Coverage
 
 - From: 2025-04-28
-- Records: 678K+
 - Use concepts endpoint first to find concept codes, then query members here
 - API path: `GET /v1/market/concept-members`

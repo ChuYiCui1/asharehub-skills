@@ -48,5 +48,4 @@ print(df[["ann_date", "holder_name", "in_de", "change_vol"]])
 ## 数据范围
 
 - 起始日期：2019-01-01
-- 记录数：6.3万+
 - API 路径：`GET /v1/market/holder-trade`

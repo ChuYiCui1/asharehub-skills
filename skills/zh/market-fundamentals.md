@@ -45,5 +45,4 @@ print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
 ## 数据范围
 
 - 起始日期：2010-01-04
-- 记录数：1360万+（最完整的数据集）
 - API 路径：`GET /v1/market/fundamentals`

@@ -82,6 +82,5 @@ print(df[["trade_date", "rzye", "rqye", "rzrqye"]])
 ## Data Coverage
 
 - From: 2020-01-02
-- Records: 4.6M+
 - Rising rzye = bullish leverage; rising rqye = bearish sentiment
 - API path: `GET /v1/market/margin`

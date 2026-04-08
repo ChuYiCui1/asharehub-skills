@@ -70,5 +70,4 @@ print(df[["trade_date", "ts_code", "name", "pct_change"]])
 ## 数据范围
 
 - 起始日期：2024-01-02
-- 记录数：3.5万+
 - API 路径：`GET /v1/market/top-list`

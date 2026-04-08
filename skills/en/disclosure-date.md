@@ -34,6 +34,5 @@ ts_code, ann_date (latest announcement), end_date (fiscal period), pre_date (pla
 ## Data Coverage
 
 - From: 2001-02-06
-- Records: 300k+
 - Use to track when companies will release earnings
 - API path: `GET /v1/financials/disclosure-date`

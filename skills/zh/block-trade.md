@@ -42,5 +42,4 @@ print(df[["trade_date", "price", "vol", "buyer", "seller"]])
 ## 数据范围
 
 - 起始日期：2010-01-04
-- 记录数：16.9万+
 - API 路径：`GET /v1/market/block-trade`

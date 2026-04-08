@@ -81,5 +81,4 @@ print(df[["trade_date", "rzye", "rqye", "rzrqye"]])
 ## 数据范围
 
 - 起始日期：2020-01-02
-- 记录数：460万+
 - API 路径：`GET /v1/market/margin`

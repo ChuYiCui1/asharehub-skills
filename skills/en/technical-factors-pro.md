@@ -34,5 +34,4 @@ print(df[["trade_date", "close_qfq", "macd_qfq", "rsi_6_qfq", "ma20_qfq"]])
 ## Data Coverage
 
 - From: 2020-01-02
-- Records: 11M+
 - API path: `GET /v1/market/technical-factors-pro`

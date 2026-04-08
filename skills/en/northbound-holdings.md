@@ -66,6 +66,5 @@ print(df[["trade_date", "name", "vol", "ratio"]])
 ## Data Coverage
 
 - From: 2020-01-02
-- Records: 4M+
 - Key signal for foreign investor positioning
 - API path: `GET /v1/flows/moneyflow-hsgt-holdings`

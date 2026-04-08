@@ -45,5 +45,4 @@ print(df[["trade_date", "pe_ttm", "pb", "total_mv"]])
 ## Data Coverage
 
 - From: 2010-01-04
-- Records: 13.6M+ (most complete dataset)
 - API path: `GET /v1/market/fundamentals`

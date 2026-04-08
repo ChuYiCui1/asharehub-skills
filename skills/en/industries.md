@@ -41,5 +41,4 @@ print(df[["ts_code", "l1_name", "l2_name", "l3_name"]])
 ## Data Coverage
 
 - Static reference data (SW2021 standard)
-- Records: 5,820 stocks across 31 L1 industries
 - API path: `GET /v1/reference/industries`

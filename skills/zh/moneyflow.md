@@ -55,5 +55,4 @@ print(df[["trade_date", "net_mf_amount", "buy_elg_amount"]])
 ## 数据范围
 
 - 起始日期：2020-01-02
-- 记录数：570万+
 - API 路径：`GET /v1/flows/moneyflow`

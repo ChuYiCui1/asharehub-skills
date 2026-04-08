@@ -71,6 +71,5 @@ print(df[["trade_date", "weight_avg", "winner_rate"]])
 ## Data Coverage
 
 - From: 2020-01-02
-- Records: 7.3M+
 - China-specific metric for analyzing shareholder cost structure
 - API path: `GET /v1/chips/distribution`

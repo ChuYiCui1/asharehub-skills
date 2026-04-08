@@ -42,6 +42,5 @@ print(df[["trade_date", "price", "vol", "buyer", "seller"]])
 ## Data Coverage
 
 - From: 2010-01-04
-- Records: 169K+
 - Large institutional transactions above regular trading limits
 - API path: `GET /v1/market/block-trade`

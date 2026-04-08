@@ -34,6 +34,5 @@ ts_code、end_date、bz_item(业务名称)、bz_sales(业务收入)、bz_profit(
 ## 数据范围
 
 - 起始日期：2014-12-31
-- 记录数：45万+
 - 用于了解公司业务构成（按产品/地区）
 - API 路径：`GET /v1/financials/main-business`

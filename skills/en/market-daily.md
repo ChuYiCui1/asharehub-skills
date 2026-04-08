@@ -43,5 +43,4 @@ print(df[["trade_date", "close", "pct_chg"]])
 ## Data Coverage
 
 - From: 2020-01-02
-- Records: 7.3M+
 - API path: `GET /v1/market/daily`

@@ -43,5 +43,4 @@ print(df[["trade_date", "close", "pct_chg"]])
 ## 数据范围
 
 - 起始日期：2020-01-02
-- 记录数：730万+
 - API 路径：`GET /v1/market/daily`

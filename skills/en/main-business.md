@@ -34,6 +34,5 @@ ts_code, end_date, bz_item (segment name), bz_sales (segment revenue), bz_profit
 ## Data Coverage
 
 - From: 2014-12-31
-- Records: 450k+
 - Use to understand which products/regions drive a company's business
 - API path: `GET /v1/financials/main-business`

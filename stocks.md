@@ -48,5 +48,4 @@ print(df[["ts_code", "name", "industry", "list_date"]])
 ## Data Coverage
 
 - Static reference data
-- Records: 5,491 stocks
 - API path: `GET /v1/reference/stocks`

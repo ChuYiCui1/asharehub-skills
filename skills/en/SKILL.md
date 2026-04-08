@@ -1,7 +1,7 @@
 ---
 name: AShareHub
 slug: asharehub
-description: Fetch Chinese A-share market data — daily prices, PE/PB valuations, northbound flows, money flow, margin trading, block trades, shareholder data, concept sectors, industry classification, financial statements, dividends, technical indicators, and 50+ quarterly financial indicators. 29 endpoints covering 5000+ stocks with 10+ years of history. Requires ASHAREHUB_API_KEY environment variable.
+description: Fetch Chinese A-share market data — daily prices, PE/PB valuations, northbound flows, money flow, margin trading, block trades, shareholder data, concept sectors, industry classification, financial statements, dividends, technical indicators, and 50+ quarterly financial indicators. 30+ endpoints covering all A-shares with 10+ years of history. Requires ASHAREHUB_API_KEY environment variable.
 user-invocable: true
 metadata:
  {
@@ -119,7 +119,7 @@ client.close()
 ### Reference Data
 | Data Type | SDK Method | Reference File | Description |
 |-----------|-----------|---------------|-------------|
-| Stock List | `client.stock_list()` | stocks.md | 5,491 A-share stocks with basic info |
+| Stock List | `client.stock_list()` | stocks.md | All listed A-share stocks with basic info |
 | Industry Classification | `client.industry_list()` | industries.md | Shenwan 3-level industry mapping |
 | Trade Calendar | `client.trade_calendar()` | trade-calendar.md | SSE/SZSE trading days & holidays |
 

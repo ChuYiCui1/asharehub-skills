@@ -65,5 +65,4 @@ print(df[["trade_date", "name", "vol", "ratio"]])
 ## 数据范围
 
 - 起始日期：2020-01-02
-- 记录数：400万+
 - API 路径：`GET /v1/flows/moneyflow-hsgt-holdings`

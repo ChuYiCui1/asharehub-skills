@@ -39,6 +39,5 @@ print(df[["end_date", "holder_num"]])
 ## Data Coverage
 
 - From: 2024-04-01
-- Records: 95K+
 - Quarterly reports. Declining count = chip concentration (accumulation by large holders)
 - API path: `GET /v1/market/shareholders`

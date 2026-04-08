@@ -48,6 +48,5 @@ print(df[["ann_date", "holder_name", "in_de", "change_vol"]])
 ## Data Coverage
 
 - From: 2019-11-20
-- Records: 63K+
 - Key signal for insider sentiment
 - API path: `GET /v1/market/holder-trade`

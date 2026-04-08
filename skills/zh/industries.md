@@ -42,5 +42,4 @@ print(df[["ts_code", "l1_name", "l2_name", "l3_name"]])
 
 - 数据类型：静态数据
 - 分类标准：申万 2021（SW2021）
-- 记录数：5,820 只
 - API 路径：`GET /v1/reference/industries`

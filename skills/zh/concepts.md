@@ -84,6 +84,5 @@ print(df[["trade_date", "name", "pct_change", "leading"]])
 ## 数据范围
 
 - 起始日期：2025-01-02
-- 记录数：10.9万+
 - 概念数量：508 个
 - API 路径：`GET /v1/market/concepts`

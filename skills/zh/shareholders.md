@@ -39,7 +39,6 @@ print(df[["end_date", "holder_num"]])
 ## 数据范围
 
 - 起始日期：2024-01-01
-- 记录数：9.5万+
 - API 路径：`GET /v1/market/shareholders`
 
 ## 备注

@@ -34,5 +34,4 @@ print(df[["trade_date", "close_qfq", "macd_qfq", "rsi_6_qfq", "ma20_qfq"]])
 ## 数据范围
 
 - 起始日期：2020-01-02
-- 记录数：1100万+
 - API 路径：`GET /v1/market/technical-factors-pro`

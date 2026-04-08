@@ -47,6 +47,5 @@ print(df[["trade_date", "net_mf_amount", "buy_elg_amount"]])
 ## Data Coverage
 
 - From: 2020-01-02
-- Records: 5.7M+
 - Amounts in 10k CNY, volumes in lots
 - API path: `GET /v1/flows/moneyflow`

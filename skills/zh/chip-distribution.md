@@ -70,6 +70,5 @@ print(df[["trade_date", "weight_avg", "winner_rate"]])
 ## 数据范围
 
 - 起始日期：2020-01-02
-- 记录数：730万+
 - 中国市场特有的持仓成本分析指标
 - API 路径：`GET /v1/chips/distribution`

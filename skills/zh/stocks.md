@@ -48,5 +48,4 @@ print(df[["ts_code", "name", "industry", "list_date"]])
 ## 数据范围
 
 - 数据类型：静态数据
-- 记录数：5,491 只
 - API 路径：`GET /v1/reference/stocks`

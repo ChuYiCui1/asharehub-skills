@@ -70,6 +70,5 @@ print(df[["trade_date", "ts_code", "name", "pct_change"]])
 ## Data Coverage
 
 - From: 2024-01-02
-- Records: 35K+
 - Stocks triggering exchange disclosure due to unusual price/volume
 - API path: `GET /v1/market/top-list`

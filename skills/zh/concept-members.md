@@ -59,5 +59,4 @@ print(df[["con_code", "name"]])
 ## 数据范围
 
 - 起始日期：2025-01-02
-- 记录数：67.8万+
 - API 路径：`GET /v1/market/concept-members`

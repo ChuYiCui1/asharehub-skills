@@ -85,5 +85,4 @@ print(df[["trade_date", "name", "pct_change", "leading"]])
 ## Data Coverage
 
 - From: 2025-04-01
-- Records: 109K+, 508 concept indices
 - API path: `GET /v1/market/concepts`
